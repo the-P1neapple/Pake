@@ -41,15 +41,6 @@ on:
         required: false
         type: boolean
         default: false
-      targets:
-        description: '[Targets, Optional, Linux only]'
-        required: false
-        default: 'deb'
-        type: choice
-        options:
-          - 'deb'
-          - 'appimage'
-          - 'all'
       debug_mode:
         description: '[Debug Mode, Optional]'
         required: false
@@ -136,7 +127,7 @@ jobs:
           FULLSCREEN: ${{ inputs.fullscreen }}
           RESIZE: ${{ inputs.resize }}
           MULTI_ARCH: ${{ inputs.multi_arch }}
-          TARGETS: ${{ inputs.targets }}
+          TARGETS: 'deb'
           SAFE_DOMAIN: ${{ inputs.safe_domain }}
           DEBUG_MODE: ${{ inputs.debug_mode }}
 
