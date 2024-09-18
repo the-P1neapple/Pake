@@ -49,7 +49,7 @@ if (process.platform === 'win32' || process.platform === 'linux') {
   params = `${params} --show-system-tray`;
 }
 
-if (process.env.DEBUG_MODE) {
+if (process.env.DEBUG_MODE === 'true') {
   params = `${params} --debug`;
 }
 
