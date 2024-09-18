@@ -26,6 +26,7 @@ pub fn system_tray_handle(app: &tauri::AppHandle, event: SystemTrayEvent) {
             "inspect_element" => {
                 let window = app.get_window("pake").unwrap();
                 window.open_devtools();
+            }
             "quit" => {
                 let _res = app.save_window_state(StateFlags::all());
                 std::process::exit(0);
